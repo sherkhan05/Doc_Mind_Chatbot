@@ -1,0 +1,55 @@
+# ── .dockerignore — keeps Docker build context clean & fast ───────────────────
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.pyc
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# IDE / editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS artefacts
+.DS_Store
+Thumbs.db
+
+# Existing data (will be re-created by Docker volumes)
+data/uploads/*
+data/embeddings/*
+!data/uploads/.gitkeep
+!data/embeddings/.gitkeep
+
+# Docker files themselves (not needed inside image)
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Tests & CI
+tests/
+.pytest_cache/
+htmlcov/
+.coverage
+
+# Docs
+*.md
+docs/
+
+# Logs
+*.log
+logs/
